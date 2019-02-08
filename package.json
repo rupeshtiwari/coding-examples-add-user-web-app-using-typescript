@@ -26,6 +26,7 @@
   "devDependencies": {
     "@types/jasmine": "2.8.7",
     "@types/node": "7.0.0",
+    "@types/pubsub-js": "^1.5.18",
     "awesome-typescript-loader": "5.2.0",
     "base64-inline-loader": "1.1.1",
     "bootstrap": "4.2.1",
