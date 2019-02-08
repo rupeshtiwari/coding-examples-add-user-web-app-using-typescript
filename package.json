@@ -1,0 +1,55 @@
+{
+  "name": "webpack-typescript-starter",
+  "version": "0.0.1",
+  "description": "A simple Webpack 4 starter with TypeScript transpilation",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.config.js --open",
+    "build": "webpack --config webpack.config.js --mode production",
+    "build:prod": "webpack --config webpack.config.js -p",
+    "test": "karma start karma.config.js",
+    "ci": "npm run build:prod && npm run test"
+  },
+  "keywords": [
+    "webpack",
+    "webpack4",
+    "typescript",
+    "jasmine",
+    "sass",
+    "jquery",
+    "bootstrap",
+    "karma"
+  ],
+  "author": "Rupesh Tiwari",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jasmine": "2.8.7",
+    "@types/node": "7.0.0",
+    "awesome-typescript-loader": "5.2.0",
+    "base64-inline-loader": "1.1.1",
+    "bootstrap": "4.2.1",
+    "css-loader": "2.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jasmine-core": "3.3.0",
+    "karma": "4.0.0",
+    "karma-chrome-launcher": "2.2.0",
+    "karma-jasmine": "2.0.1",
+    "karma-jasmine-html-reporter": "1.4.0",
+    "karma-webpack": "3.0.5",
+    "node-sass": "^4.11.0",
+    "sass-loader": "7.1.0",
+    "source-map-loader": "0.2.4",
+    "style-loader": "^0.23.1",
+    "tslint": "5.10.0",
+    "tslint-loader": "3.6.0",
+    "typescript": "3.3.3",
+    "url-loader": "1.1.2",
+    "webpack": "4.29.3",
+    "webpack-cli": "3.2.3",
+    "webpack-dev-server": "3.1.14"
+  },
+  "dependencies": {
+    "jquery": "3.3.1",
+    "pubsub-js": "1.7.0"
+  }
+}
