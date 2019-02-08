@@ -4,7 +4,7 @@
 
 This is a starter project to get started with typescript3 + webpack4 + jasmine + karma + Sass + Bootstrap + jQuery.
 
-Also check out the official Webpack 4 docs for a proper TypeScript setup: https://webpack.js.org/guides/typescript/
+Also check out the official Webpack 4 docs for a proper TypeScript setup: <https://webpack.js.org/guides/typescript/>
 
 Contributions/suggestions are welcome :smiley:
 
@@ -22,30 +22,28 @@ Contributions/suggestions are welcome :smiley:
 
 Just clone it and get going.
 
-```
-# --depth 1 removes all but one .git commit history
-$ git clone --depth=1 https://github.com/roopkt/Training-Typescript-Webpack-Karma.git <your-project-name>
+        # --depth 1 removes all but one .git commit history
+        $ git clone --depth=1 https://github.com/roopkt/Training-Typescript-Webpack-Karma.git <your-project-name>
 
-# change directory to your project
-cd  <your-project-name>
+        # change directory to your project
+        cd  <your-project-name>
 
-# Maybe remove the `.git` directory and start with a fresh one.
+        # Maybe remove the `.git` directory and start with a fresh one.
 
-# install all dependencies.
-$ npm i
+        # install all dependencies.
+        $ npm i
 
-# Start developing and serve your app:
-npm start
+        # Start developing and serve your app:
+        npm start
 
-# Build your app without minification:
-npm run build
+        # Build your app without minification:
+        npm run build
 
-# Build your app with minification:
-npm run build:prod
+        # Build your app with minification:
+        npm run build:prod
 
-# run unit tests:
-npm run test
-```
+        # run unit tests:
+        npm run test
 
 ## Contributions
 

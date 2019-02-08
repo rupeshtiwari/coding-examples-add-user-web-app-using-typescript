@@ -8,7 +8,8 @@
     "build": "webpack --config webpack.config.js --mode production",
     "build:prod": "webpack --config webpack.config.js -p",
     "test": "karma start karma.config.js",
-    "ci": "npm run build:prod && npm run test"
+    "test:prod": "karma start karma-prod.config.js",
+    "ci": "npm run build:prod && npm run test:prod"
   },
   "keywords": [
     "webpack",
@@ -44,7 +45,7 @@
     "tslint-loader": "3.6.0",
     "typescript": "3.3.3",
     "url-loader": "1.1.2",
-    "webpack": "4.29.3",
+    "webpack": "^4.29.3",
     "webpack-cli": "3.2.3",
     "webpack-dev-server": "3.1.14"
   },
