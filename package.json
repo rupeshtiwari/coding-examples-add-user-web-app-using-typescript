@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.js --open",
     "build": "webpack --config webpack.config.js --mode production",
-    "build:prod": "webpack --config webpack.config.js -p",
+    "build:prod": "webpack --config webpack-prod.config.js -p",
     "test": "karma start karma.config.js",
     "test:prod": "karma start karma-prod.config.js",
     "ci": "npm run build:prod && npm run test:prod"
