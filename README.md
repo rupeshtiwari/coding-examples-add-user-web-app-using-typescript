@@ -6,7 +6,7 @@ This is a starter project to get started with typescript3 + webpack4 + jasmine +
 
 Also check out the official Webpack 4 docs for a proper TypeScript setup: https://webpack.js.org/guides/typescript/
 
-_Note, this is still a WIP. Contributions/suggestions are welcome :smiley:_
+Contributions/suggestions are welcome :smiley:_
 
 ## Features
 
@@ -49,4 +49,4 @@ npm run test
 
 ## Contributions
 
-Please contribute if you need improvement and found any bugs.
+Please contribute if you need improvement and found any bugs smiley:_
