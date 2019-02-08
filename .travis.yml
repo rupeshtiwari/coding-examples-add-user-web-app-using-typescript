@@ -1,11 +1,8 @@
 language: nodejs
 
 before_script:
-  - npm run setup
+  - npm run install
 
 script:
   - npm run ci
 
-after_success:
-  - npm run typedoc
-  - npm pack
