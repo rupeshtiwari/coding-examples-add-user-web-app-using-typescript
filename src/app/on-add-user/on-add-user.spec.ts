@@ -1,9 +1,16 @@
 import * as bus from 'pubsub-js';
 import { User } from '../store/user';
-import { AddUser } from '../messages';
+import { AddUser, AddUserSuccess } from '../messages';
 import { getUserById } from '../store/store';
 
 describe('on-add-user', () => {
+  beforeEach(() => {
+    // spy the publishsync function from bus.
+    // note we are using .and.callThrough() to make sure the original function is getting called.
+
+    spyOn(bus, 'publishSync').and.callThrough();
+  });
+
   it('should add user', () => {
     // someone publish message with user
     const user = { name: 'rupesh', id: 1 };
@@ -20,9 +27,8 @@ describe('on-add-user', () => {
     // someone publish message with user
     const user = { name: 'rupesh', id: 2 };
 
-    spyOn(bus, 'publishSync');
     bus.publishSync(AddUser, user);
-    
-    expect(bus.publishSync).toHaveBeenCalledWith(AddUser, user.id);
+
+    expect(bus.publishSync).toHaveBeenCalledWith(AddUserSuccess, user.id);
   });
 });
