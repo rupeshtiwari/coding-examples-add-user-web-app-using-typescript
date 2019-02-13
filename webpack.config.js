@@ -8,7 +8,7 @@ module.exports = {
   context: ROOT,
 
   entry: {
-    index: './index.ts',
+    index: path.resolve(ROOT, 'index.ts'),
   },
 
   output: {
@@ -78,7 +78,7 @@ module.exports = {
   devtool: 'inline-source-map',
 
   devServer: {
-    port: 4200,
-    contentBase: 'src/',
+    port: 4250,
+    contentBase: 'dist/',
   },
 };
