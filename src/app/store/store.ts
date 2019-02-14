@@ -6,6 +6,6 @@ export function addUser(user: User) {
   userList.push(user);
 }
 
-export function getUserById(id: number) {
+export function getUserById(id: string) {
   return userList.filter(u => u.id === id).pop();
 }

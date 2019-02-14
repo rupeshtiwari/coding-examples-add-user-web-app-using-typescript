@@ -1,5 +1,5 @@
 const webpackConfig = require('./webpack-test.config.js');
-webpackConfig.mode = 'production';
+webpackConfig.mode = 'development';
 
 module.exports = function(config) {
   config.set({
