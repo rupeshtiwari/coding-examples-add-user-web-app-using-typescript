@@ -1,2 +1,2 @@
-export const AddUser = 'UsersAdd';
-export const AddUserSuccess = 'UsersAddSuccess';
+export const AddUser = 'Users [Add]';
+export const AddUserSuccess = 'Users [Add Success]';
