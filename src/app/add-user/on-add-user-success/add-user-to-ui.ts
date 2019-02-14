@@ -8,8 +8,7 @@ bus.subscribe(AddUserSuccess, addUserInTable);
 
 export function addUserInTable(msg: string, userId: string) {
   const user = store.getUserById(userId);
-  $('#userList').append(`
-  <tr>
+  $('#userList>tbody').append(`<tr>
   <th scope="row">1</th>
   <td>${user.firstName}</td>
   <td>${user.lastName}</td>

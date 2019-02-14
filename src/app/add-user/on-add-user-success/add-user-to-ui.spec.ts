@@ -30,7 +30,11 @@ describe('add-user-toui', () => {
 
     bus.publishSync(AddUserSuccess, user.id);
 
-    expect($('#userList').html()).toContain(`<tr>
+    expect(
+      $('#userList>tbody')
+        .html()
+        .trim()
+    ).toContain(`<tr>
     <th scope="row">1</th>
     <td>Rupesh</td>
     <td>Tiwari</td>
