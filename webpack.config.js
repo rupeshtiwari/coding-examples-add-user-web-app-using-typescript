@@ -1,3 +1,4 @@
+const { PORT } = require('./server/server-port');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -8,17 +9,17 @@ module.exports = {
   context: ROOT,
 
   entry: {
-    index: './index.ts',
+    index: './index.ts'
   },
 
   output: {
     filename: '[name].bundle.js',
-    path: DESTINATION,
+    path: DESTINATION
   },
 
   resolve: {
     extensions: ['.ts', '.js'],
-    modules: [ROOT, 'node_modules'],
+    modules: [ROOT, 'node_modules']
   },
 
   module: {
@@ -29,13 +30,13 @@ module.exports = {
       {
         enforce: 'pre',
         test: /\.js$/,
-        use: 'source-map-loader',
+        use: 'source-map-loader'
       },
       {
         enforce: 'pre',
         test: /\.ts$/,
         exclude: /node_modules/,
-        use: 'tslint-loader',
+        use: 'tslint-loader'
       },
 
       /****************
@@ -45,32 +46,32 @@ module.exports = {
       {
         test: /\.ts$/,
         exclude: [/node_modules/],
-        use: 'awesome-typescript-loader',
+        use: 'awesome-typescript-loader'
       },
       // css
       {
         test: /\.css$/,
-        use: ['css-loader'],
+        use: ['css-loader']
       },
       // scss
       {
         test: /\.(scss)$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: ['style-loader', 'css-loader', 'sass-loader']
       },
       // images/fonts
       {
         test: /\.(jpe?g|png|ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
-        use: 'base64-inline-loader',
-      },
-    ],
+        use: 'base64-inline-loader'
+      }
+    ]
   },
 
   plugins: [
     new HtmlWebpackPlugin({
       template: 'index.html',
       favicon: 'favicon.ico',
-      inject: 'body',
-    }),
+      inject: 'body'
+    })
   ],
 
   performance: { hints: false },
@@ -78,7 +79,12 @@ module.exports = {
   devtool: 'inline-source-map',
 
   devServer: {
+    proxy: {
+      proxy: {
+        '/api': `http://localhost:${PORT}`
+      }
+    },
     port: 4200,
-    contentBase: 'src/',
-  },
+    contentBase: 'src/'
+  }
 };

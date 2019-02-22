@@ -5,11 +5,8 @@
     "noImplicitAny": true,
     "module": "commonjs",
     "target": "es5",
-    "sourceRoot": "server"
+    "sourceRoot": "server",
+    "allowJs": true
   },
-  "exclude": [
-    "node_modules",
-    "src",
-    "dist"
-  ]
+  "exclude": ["node_modules", "src", "dist"]
 }
