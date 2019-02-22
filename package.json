@@ -1,17 +1,21 @@
 {
-  "name": "webpack-typescript-starter",
+  "name": "webpack-typescript-express",
   "version": "0.0.1",
-  "description": "A simple Webpack 4 starter with TypeScript transpilation",
+  "description": "Webpack enabled express js sample app",
   "main": "index.js",
   "scripts": {
     "setup": "npm install",
-    "start": "webpack-dev-server --config webpack.config.js --open",
+    "start":"concurrently npm:start:server npm:start:client",
+    "start:client": "webpack-dev-server --config webpack.config.js --open",
     "build": "webpack --config webpack.config.js --mode production",
     "build:prod": "webpack --config webpack-prod.config.js -p",
     "test": "karma start karma.config.js",
     "test:prod": "karma start karma-prod.config.js",
-    "typedoc": "typedoc --out docs --mode modules --tsconfig tsconfig.json src/",
-    "ci": "npm run build:prod && npm run test:prod"
+    "docs": "typedoc --out docs --mode modules --tsconfig tsconfig.json src/",
+    "ci": "npm run build:prod && npm run test:prod",
+    "build:server": "tsc --project server/tsconfig.json -w",
+    "watch:server": "nodemon -w dist/server --exec \"node dist/server/index.js\"",
+    "start:server": "concurrently npm:build:server npm:watch:server"
   },
   "keywords": [
     "webpack",
@@ -26,6 +30,7 @@
   "author": "Rupesh Tiwari",
   "license": "ISC",
   "devDependencies": {
+    "@types/express": "^4.16.1",
     "@types/jasmine": "2.8.7",
     "@types/jquery": "^3.3.29",
     "@types/node": "7.0.0",
@@ -33,6 +38,7 @@
     "awesome-typescript-loader": "5.2.0",
     "base64-inline-loader": "1.1.1",
     "bootstrap": "4.2.1",
+    "concurrently": "^4.1.0",
     "css-loader": "2.1.0",
     "html-webpack-plugin": "^3.2.0",
     "jasmine-core": "3.3.0",
@@ -42,6 +48,7 @@
     "karma-jasmine-html-reporter": "1.4.0",
     "karma-webpack": "3.0.5",
     "node-sass": "^4.11.0",
+    "nodemon": "^1.18.10",
     "npm-run-all": "^4.1.5",
     "sass-loader": "7.1.0",
     "shx": "^0.3.2",
@@ -57,6 +64,7 @@
     "webpack-dev-server": "3.1.14"
   },
   "dependencies": {
+    "express": "^4.16.4",
     "jquery": "^3.3.1",
     "pubsub-js": "1.7.0",
     "uuid": "^3.3.2"
