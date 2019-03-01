@@ -1,12 +1,10 @@
-# Webpack 4 + TypeScript starter
+# Webpack 4 + TypeScript + ExpressJS + Mongoose
 
 [![Build Status](https://travis-ci.org/roopkt/Training-Typescript-Webpack-Karma.svg?branch=master)](https://travis-ci.org/roopkt/Training-Typescript-Webpack-Karma)
 
 This is a starter project to get started with typescript3 + webpack4 + jasmine + karma + Sass + Bootstrap + jQuery.
 
-Also check out the official Webpack 4 docs for a proper TypeScript setup: <https://webpack.js.org/guides/typescript/>
-
-Contributions/suggestions are welcome :smiley:
+In this project I have couple of extra branch where I have code for `TDD` with ADD user Use Case and also it has couple of other branches where one for ExpressJS and other is for `ExpressJS` and `Mongoose`.
 
 ## Features
 
